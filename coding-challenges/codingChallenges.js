@@ -121,10 +121,8 @@ Test data:
 */
 
 console.log("OUTPUT:");
-
 const bill = 430;
-
-bill >= 50 && bill<=300 ? bill*0.15 : bill*0.2;
-console.log(`The bill was ${bill}, the tip was ${bill*0.15}, and the total value ${bill + bill*0.15}`)
+const tip = bill>=50 && bill<=300 ? bill*0.15 : bill*0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
 
 console.log("--------");
