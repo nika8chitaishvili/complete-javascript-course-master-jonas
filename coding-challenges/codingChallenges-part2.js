@@ -19,7 +19,7 @@ console.log("OUTPUT:");
 
 const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3;
 
-const checkWinner = function (dolphinsScore1, average2) {
+const checkWinner = function (dolphinsScore, koalasScore) {
   if(dolphinsScore >= 2*koalasScore) {
     console.log(`Result - Dolphins Win:
     Dolphins: ${dolphinsScore}
@@ -48,5 +48,7 @@ koalasScore = calcAverage(23, 34, 27); // 28
 checkWinner(dolphinsScore, koalasScore);
 
 console.log("--------");
+
+
 
 
