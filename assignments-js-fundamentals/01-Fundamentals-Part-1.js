@@ -1,4 +1,4 @@
-console.log("LECTURE: Values and Variables");
+console.log("LECTURE: Values and Variables - Part 1");
 /*
 1. Declare variables called 'country', 'continent' and 'population' and
 assign their values according to your own country (population in millions)
@@ -14,10 +14,11 @@ console.log("Country: " + country);
 console.log("Continent: " + continent);
 console.log("Population: " + population);
 console.log("--------");
+console.log("--------");
 
 
 
-console.log("LECTURE: Data Types");
+console.log("LECTURE: Data Types - Part 1");
 /*
 1. Declare a variable called 'isIsland' and set its value according to your
 country. The variable should hold a Boolean value. Also declare a variable
@@ -35,10 +36,11 @@ console.log(typeof population);
 console.log(typeof country);
 console.log(typeof language);
 console.log("--------");
+console.log("--------");
 
 
 
-console.log("LECTURE: let, const and var");
+console.log("LECTURE: let, const and var - Part 1");
 /*
 1. Set the value of 'language' to the language spoken where you live (some
 countries have multiple languages, but just choose one)
@@ -56,10 +58,11 @@ console.log(population);
 console.log(country);
 console.log(language);
 console.log("--------");
+console.log("--------");
 
 
 
-console.log("LECTURE: Basic Operators");
+console.log("LECTURE: Basic Operators - Part 1");
 /*
 1. If your country split in half, and each half would contain half the population,
 then how many people would live in each half?
@@ -82,9 +85,10 @@ let description = country + " is in " + continent + ", and it's " + population +
 
 console.log(description);
 console.log("--------");
+console.log("--------");
 
 
-console.log("LECTURE: Strings and Template Literals");
+console.log("LECTURE: Strings and Template Literals - Part 1");
 /*
 1. Recreate the 'description' variable from the last assignment, this time using the template literal syntax
 */
@@ -93,9 +97,10 @@ description = `${country} is in  ${continent}, and it's ${population} people spe
 
 console.log(description);
 console.log("--------");
+console.log("--------");
 
 
-console.log("LECTURE: Taking Decisions: if / else Statements");
+console.log("LECTURE: Taking Decisions: if / else Statements - Part 1");
 /*
 1. If your country's population is greater that 33 million, log a string like this to the
 console: 'Portugal's population is above average'. Otherwise, log a string like
@@ -115,9 +120,10 @@ if (population > 33) {
   console.log(`${country}'s population is below average by ${averageGap} million`)
 }
 console.log("--------");
+console.log("--------");
 
 
-console.log("LECTURE: Type Conversion and Coercion");
+console.log("LECTURE: Type Conversion and Coercion - Part 1");
 /*
 1. Predict the result of these 5 operations without executing them:
 '9' - '5';
@@ -136,9 +142,10 @@ console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
 
 console.log("--------");
+console.log("--------");
 
 
-console.log("LECTURE: Equality Operators: == vs. ===");
+console.log("LECTURE: Equality Operators: == vs. === - Part 1");
 /*
 1. Declare a variable 'numNeighbours' based on a prompt input like this: 
 prompt('How many neighbour countries does your country have?');
@@ -164,10 +171,11 @@ if(numNeighbours === 1){
 }
 
 console.log("--------");
+console.log("--------");
 
 
 
-console.log("LECTURE: Logical Operators");
+console.log("LECTURE: Logical Operators - Part 1");
 /*
 1. Comment out the previous code so the prompt doesn't get in the way
 2. Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks english, has less than 50 million  people and is not an island.
@@ -185,3 +193,50 @@ if(language=='English' && population<50 && isIsland==false){
 }
 
 console.log("--------");
+console.log("--------");
+
+
+console.log("LECTURE: The switch Statement - Part 1");
+/*
+1. Use a switch statement to log the following string for the given 'language':
+chinese or mandarin: 'MOST number of native speakers!'
+spanish: '2nd place in number of native speakers'
+english: '3rd place'
+hindi: 'Number 4'
+arabic: '5th most spoken language'
+for all other simply log 'Great language too :D'
+*/
+
+console.log("OUTPUT:");
+
+const selectedLanguage = 'english';
+switch (selectedLanguage) {
+  case 'chinese':
+  case 'mandarin':
+    console.log(`Selected Language: ${selectedLanguage}`);
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log(`Selected Language: ${selectedLanguage}`);
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+      console.log(`Selected Language: ${selectedLanguage}`);
+      console.log('3rd place');
+    break;
+  case 'hindi':
+      console.log(`Selected Language: ${selectedLanguage}`);
+      console.log('Number 4');
+    break;
+  case 'arabic':
+      console.log(`Selected Language: ${selectedLanguage}`);
+      console.log('5th most spoken language');
+    break;
+  default:
+    console.log(`Selected Language: ${selectedLanguage}`);
+    console.log(`Great language too :D`);
+}
+
+console.log("--------");
+console.log("--------");
+
