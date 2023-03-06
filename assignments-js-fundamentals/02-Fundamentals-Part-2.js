@@ -139,3 +139,22 @@ console.log(neoghboursGeorgia);
 
 console.log("--------");
 console.log("--------");
+
+
+console.log("LECTURE: Introduction to Objects - Part 2");
+/*
+1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
+*/
+
+const myCountry = {
+  country: "Georgia",
+  capital: "Tbilisi",
+  language: "Georgian",
+  population: 4000000,
+  neighbours: ["Armenia", "Azerbaijan", "Turkey","Russia"]
+}
+
+console.log(myCountry);
+
+console.log("--------");
+console.log("--------");
