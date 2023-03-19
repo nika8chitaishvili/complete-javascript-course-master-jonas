@@ -1,8 +1,17 @@
 "use strict";
 
-// INTRODUCE  STARTING VARIABLES
+// INTRODUCE  STARTING VARIABLES & FUNCTIONS
 let score = 20;
 let highScore = 0;
+let displayMessage = function (message) {
+	document.querySelector(".message").textContent = message;
+};
+let displayNumber = function (number) {
+	document.querySelector(".number").textContent = number;
+};
+let displayGuess = function (guess) {
+	document.querySelector(".guess").value = guess;
+};
 
 // DECLARE RANDOM NUMBER AT START
 let randNumber = Math.trunc(Math.random() * 20) + 1;
@@ -28,14 +37,13 @@ const check = function () {
 
 	// When Check is clicked without input
 	if (!guess) {
-		document.querySelector(".message").textContent = "No Number!";
+		displayMessage("No Number!");
 	} else if (guess === randNumber) {
 		// When guess is correct
-		document.querySelector(".message").textContent = "Correct !";
-		document.querySelector(".message").textContent = "Correct !";
-		document.querySelector(".number").textContent = guess;
+		displayMessage("Correct !");
+		displayNumber(guess);
 		document.querySelector(".number").style.backgroundColor = "#60b347";
-		document.querySelector(".guess").value = "##";
+		displayGuess("##");
 		document.querySelector(".message").style.color = "#60b347";
 		if (score > highScore) {
 			highScore = score;
@@ -44,35 +52,23 @@ const check = function () {
 		console.log(`Correct Number: ${guess}`);
 
 		// When guess above the number
-	} else if (guess > randNumber) {
+	} else if (guess !== randNumber) {
 		if (score > 1) {
-			document.querySelector(".message").textContent = "Guess is Higher...";
-			document.querySelector(".number").textContent = guess;
-			document.querySelector(".guess").value = "##";
+			displayMessage(guess > score ? "Guess is Higher..." : "Guess is Lower...");
+			displayNumber(guess);
+			displayGuess("##");
 			score--;
 			document.querySelector(".score").textContent = score;
 		} else {
 			// When score reaches 0
-			document.querySelector(".message").textContent = "You LOST...";
+			displayMessage("You LOST...");
+			document.querySelector(".number").style.backgroundColor = "#FF1122";
+			displayGuess("##");
+			document.querySelector(".message").style.color = "#FF1122";
 			document.querySelector(".score").textContent = 0;
-			document.querySelector(".number").textContent = guess;
-			document.querySelector(".guess").value = "##";
+			displayNumber(guess);
 		}
 		// When guess is below the number
-	} else if (guess < randNumber) {
-		if (score > 1) {
-			document.querySelector(".message").textContent = "Guess is Lower...";
-			document.querySelector(".number").textContent = guess;
-			document.querySelector(".guess").value = "##";
-			score--;
-			document.querySelector(".score").textContent = score;
-		} else {
-			// When score reaches 0
-			document.querySelector(".message").textContent = "You LOST...";
-			document.querySelector(".score").textContent = 0;
-			document.querySelector(".number").textContent = guess;
-			document.querySelector(".guess").value = "##";
-		}
 	}
 };
 
